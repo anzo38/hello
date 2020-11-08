@@ -1,0 +1,210 @@
+/* Theme Name: hello
+Theme URL: テーマのサイトのURI
+Description: テーマの説明
+Author: 作者の名前
+Version: テーマのバージョン
+Tags: テーマの特徴を表すタグ（カンマ区切り/オプション）
+License: テーマのライセンス
+License URI: テーマのライセンスのURI
+*/// Config: fonts
+@charset "UTF-8";
+@import "reset";
+
+// font
+// header
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,300&display=swap');
+// body
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+// body{
+//   font-family: 'Lato', sans-serif;
+// }
+
+html {
+	overflow: auto;
+}
+// body {
+//   overflow: hidden;
+// }
+body{
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow: hidden;
+}
+
+h2{
+  font-size: 32px;  
+}
+
+
+#mainvisal{
+  width: 100%;
+  height: 100vh;
+}
+.mainvisal-innner {
+
+  height: 500px;
+  margin: 0 auto;
+  margin-top:30px;
+}
+
+.mainvisal-tittle{
+
+width: auto;
+h1 {
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 100px;
+  text-align: center;
+  font-size: 300px;
+  font-weight: 800;
+  background-image: url("img/header@2x.jpg");
+  background-position:top;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top:100px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+ 
+p{
+  text-align: center;
+margin-top:80px;
+  background: white;
+  color: black;
+  font-size: 22px;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  opacity: 0.8;
+
+}
+}
+// navi
+// .menu-global-container{
+// margin-top: 0; 
+// }
+.main-nav{
+ display: flex;
+ justify-content: flex-end;
+ margin-right: 0;
+ margin-top:30px;
+
+  }
+  
+
+  li{
+    font-size: 22px;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 50px;
+    vertical-align: middle;
+    list-style-type: none;
+   
+  }
+   a{
+     color: black;
+    list-style-type: none;
+    text-decoration: none;
+    &:visited{
+      color: black;
+      &:hover{
+        color: lightblue;
+        font-size: 25px;
+      }
+    }
+   }
+   
+
+
+  // about
+
+#about
+{
+  width:920px;
+  text-align: center;
+  margin:100px auto;
+
+}
+
+// skills
+#skills{
+  width:920px;
+  text-align: center;
+  margin:100px auto;
+  h2{
+    margin: 50px;
+   
+  }
+}
+.skills-icon{
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+ 
+  &-under{
+   margin:30px
+      }
+}
+
+#bio{
+  width: 920px;
+  margin: 100px auto;
+  font-size: large;
+  text-align: center;
+}
+.bio-inner{
+  width: 300px;
+  margin: 100px auto;
+  text-align: center;
+}
+.bio-item{
+  display: flex;
+  
+ 
+
+  justify-content:space-between;
+position: relative;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left:100px;
+    width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background:lightskyblue;
+  // vertical-align: middle;
+  // text-align: center;
+  }
+dt{
+  text-align: left;
+}
+dd{
+  text-align: left;
+  margin-right:20px;
+}
+}
+// .slider{
+//   margin: 100px auto;
+//   width: 80%;
+// }
+// .slider img{
+//   height: auto;
+//   width: 100%;
+// }
+/*slick setting*/
+// .slick-prev:before,
+// .slick-next:before {
+//   color: #000;
+// }
+
+
+// ScrollReveal
+
+// 投稿一覧
+.works-inner{
+
+  display: flex;
+}

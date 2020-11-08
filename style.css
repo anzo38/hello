@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* Theme Name: hello
+Theme URL: テーマのサイトのURI
+Description: テーマの説明
+Author: 作者の名前
+Version: テーマのバージョン
+Tags: テーマの特徴を表すタグ（カンマ区切り/オプション）
+License: テーマのライセンス
+License URI: テーマのライセンスのURI
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+#mainvisal {
+  width: 100%;
+  height: 100vh;
+}
+
+.mainvisal-innner {
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.mainvisal-tittle {
+  width: auto;
+}
+
+.mainvisal-tittle h1 {
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 100px;
+  text-align: center;
+  font-size: 300px;
+  font-weight: 800;
+  background-image: url("img/header@2x.jpg");
+  background-position: top;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.mainvisal-tittle p {
+  text-align: center;
+  margin-top: 80px;
+  background: white;
+  color: black;
+  font-size: 22px;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 0;
+  margin-top: 30px;
+}
+
+li {
+  font-size: 22px;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 50px;
+  vertical-align: middle;
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:visited:hover {
+  color: lightblue;
+  font-size: 25px;
+}
+
+#about {
+  width: 920px;
+  text-align: center;
+  margin: 100px auto;
+}
+
+#skills {
+  width: 920px;
+  text-align: center;
+  margin: 100px auto;
+}
+
+#skills h2 {
+  margin: 50px;
+}
+
+.skills-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 32px;
+}
+
+.skills-icon-under {
+  margin: 30px;
+}
+
+#bio {
+  width: 920px;
+  margin: 100px auto;
+  font-size: large;
+  text-align: center;
+}
+
+.bio-inner {
+  width: 300px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.bio-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.bio-item:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 100px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: lightskyblue;
+}
+
+.bio-item dt {
+  text-align: left;
+}
+
+.bio-item dd {
+  text-align: left;
+  margin-right: 20px;
+}
+
+/*slick setting*/
+.works-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */
