@@ -105,4 +105,10 @@
 <?php next_post_link('%link <i class="fas fa-angle-double-right"></i>', 'next'); ?></p>
  </div>
 
+<p class="toppage">
+<i class="fas fa-angle-left"></i>
+<a href ="<?php echo home_url( '/' );?>">Top</a>
+
+</p>
+
 <?php get_footer(); ?>
