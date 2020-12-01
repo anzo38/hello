@@ -8,56 +8,67 @@ License: テーマのライセンス
 License URI: テーマのライセンスのURI
 */// Config: fonts
 @charset "UTF-8";
+
 @import "reset";
+@import "mixin";
+
+
 
 // font
 // header
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,300&display=swap');
 // body
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&display=swap');
+// h2 font
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
 // body{
 //   font-family: 'Lato', sans-serif;
 // }
 
 html {
-	overflow: auto;
+  overflow: auto;
 }
-// body {
-//   overflow: hidden;
-// }
-body{
-  font-family: 'Noto Sans JP', sans-serif;
-  overflow: hidden;
-}
+ 
 
-h2{
-  font-size: 32px;  
+
+body{
+  // width: 100vw;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  // overflow-x: hidden;
+  
+
+//  min-width: 768px;
+
+
 }
 
 
 #mainvisal{
   width: 100%;
   height: 100vh;
+ 
+  @include mq(sp){
+    width:auto;
+    height:50vh ;
+  }
 }
 .mainvisal-innner {
-
-  height: 500px;
+  // overflow-x: hidden;
+  // height: 500px;
   margin: 0 auto;
   margin-top:30px;
 }
 
-.mainvisal-tittle{
+.mainvisal-title{
 
-width: auto;
 h1 {
   margin: 0 auto;
   padding: 20px;
   font-size: 100px;
   text-align: center;
-  font-size: 300px;
+  font-size:(250px / 1020px) * 100vw;
   font-weight: 800;
   background-image: url("img/header@2x.jpg");
   background-position:top;
@@ -65,22 +76,34 @@ h1 {
   -webkit-text-fill-color: transparent;
   margin-top:100px;
   font-family: 'Montserrat', sans-serif;
+  // @include sp{
+  //   width:auto;
+  //   // margin: 0 auto;
+  //   padding: 0;
+  // }
+
+}
+a{
+ 
+text-decoration: none;
 }
 
  
-p{
+.sub-title{
   text-align: center;
 margin-top:80px;
   background: white;
   color: black;
-  font-size: 22px;
-  font-style: italic;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  opacity: 0.8;
+  font-size: (22px / 1020px) * 100vw;
+  // font-style: italic;
+  font-family: 'Noto Sans JP', sans-serif;
+  // font-weight: 300;
+
 
 }
 }
+
+
 // navi
 // .menu-global-container{
 // margin-top: 0; 
@@ -90,14 +113,16 @@ margin-top:80px;
  justify-content: flex-end;
  margin-right: 0;
  margin-top:30px;
-
+ @include mq(sp){
+   display:none;
   }
+
   
 
   li{
     font-size: 22px;
-    font-style: italic;
-    font-family: 'Montserrat', sans-serif;
+    // font-style: italic;
+    font-family: 'Noto Sans JP', sans-serif;
     margin-right: 50px;
     vertical-align: middle;
     list-style-type: none;
@@ -115,27 +140,214 @@ margin-top:80px;
       }
     }
    }
-   
-
+  }
+  
+ 
 
   // about
 
 #about
 {
-  width:920px;
+  width:1020px;
   text-align: center;
   margin:100px auto;
+  // padding:0 0 300px 0;
+  box-sizing: border-box;
+  @include mq(sp){
+    width:auto;
+    margin:0 15px;
+    padding-top:100px;
+}
+}
+
+.box{
+  width:80%;
+  font-size: 90px;
+    font-weight:900 ;
+    font-family: 'Work Sans', sans-serif;
+    text-align: left;
+    margin: 0 auto;
+    @include mq(sp){
+      font-size: (90px / 896px) * 100vw;
+    }
+  }
+.strong{
+  font-family: 'Work Sans', sans-serif;
+  background-image: url("img/header@2x.jpg");
+    -webkit-background-clip: text;    
+    color: transparent;    
+}
+
+
+// .about-caption{
+//   width:1020px;
+//   font-size: 28px;
+//   text-align: left;
+//   margin:300px auto 300px 0;
+//   // margin-top:500px;
+//   position: relative;
+//   @include mq(sp){
+//     width:auto;
+//     margin:100px auto 100px 0;
+//     font-size: 18px;
+// }
+// }
+//  .line{
+//     content:"";
+//     display: block;
+//     width:2px;
+//     height:300px;
+//     background-color: #777;
+//     position: absolute;
+//     top: 80px;
+//     @include mq(sp){ 
+//       width:1px;
+//       height:150px;
+//       left:30px ;
+//       top: 40px;
+//     }
+// }
+
+// .about-container{
+//   width:1020px;
+//   position: relative;
+//   @include mq(sp){ 
+//     width: auto;
+// }
+// }
+// .box{
+//  width:100%;
+// //  font-size: 24px;
+//  overflow: visible;
+ 
+// p{
+//   font-size: 24px;
+//   font-style: italic;
+//   @include mq(sp){ 
+//     font-size: 18px;
+//   }
+// }
+
+
+// .box-01{
+
+//   margin:25px auto 0 0;
+ 
+//   padding-top:100px;
+//   text-align: left;
+//     // height: 300px;
+//     font-style: italic;
+ 
+  
+//   }
+
+  // .box-02{
+  
+  //   margin:100px 0 ;
+  //   text-align: right;
+  //   // width:40%;
+  //     // height: 300px;
+  //     // @include font;
+
+  //     // font-style: italic;
+  //     position: absolute;
+  //     left:20%;
+  //   }
+  
+    // .box-03{
+    //   margin:200px 0 ;
+    //   // text-align: right;
+    //   // width:40%;
+    //   font-style: italic; position: absolute;
+    //   left:40%;
+    
+    //   }
+
+    
+
+.about-intro{
+  width: 90%;
+  margin: 100px auto 0;
+  // padding-top: 300px ;
+  display: flex;
+  justify-content: center;
+  @include mq(sp){
+    display: block;
+  }
+  
+  .intro-img{
+    flex-basis:40%;
+  
+  }
+img{
+  width:300px;
+  height: 300px;
+  border-radius: 75%;
+  filter: grayscale(100%);
+  @include mq(sp){
+    width:280px;
+    height: 280px;
+    margin: 0 auto;
+    }
+
+}
+.intro-text{
+
+margin-left:50px;
+  text-align: left;
+  flex-basis:60%;
+  
+  @include mq(sp){
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+  .intro-name{
+    font-family: 'Work Sans', sans-serif;
+font-size: 24px;
+font-weight: 600;
+@include mq(sp){
+width: 250px;
+  font-size:20px;
+  margin:30px auto;
+ 
+}
+  }
+  p{
+ 
+    // word-wrap: break-word;
+    font-size: 16px;
+    margin-top:30px;
+    
+
+  }
+}
 
 }
 
 // skills
+.skills-back{
+  background-color:#f0ffff
+  ;
+
+  width:auto;
+  padding: 50px 0;
+}
 #skills{
-  width:920px;
+  width:1020px;
   text-align: center;
   margin:100px auto;
-  h2{
+  @include mq(sp){
+   width: auto;
+    margin:100px auto;
+  }
+  h3{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
     margin: 50px;
-   
+   font-size: 34px;
+   @include mq(sp){
+    font-size: 24px;
+  }
   }
 }
 .skills-icon{
@@ -148,44 +360,231 @@ margin-top:80px;
       }
 }
 
-#bio{
-  width: 920px;
-  margin: 100px auto;
-  font-size: large;
-  text-align: center;
+
+// works-frontpage
+#works{
+width:1020px;
+margin:100px auto;
+// background-color:#f0ffff;
+padding:100px 0;
+@include mq(sp){
+  width:auto;
+  margin:0 15px;
 }
-.bio-inner{
-  width: 300px;
-  margin: 100px auto;
-  text-align: center;
+
+
+
+  h3{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    margin:100px 0;
+    border-bottom:solid 1px #777;
+    @include mq(sp){
+      font-size: 24px;
+  }
+  }
 }
-.bio-item{
-  display: flex;
+// :
+
+.works-contents{
+  display:flex;
+  justify-content:  space-between;
+  flex-wrap:wrap;
+ 
+  width: auto;
+  @include mq(sp){
+  
+    width:auto;
+    margin:0 15px;
+    display:block;
+  }
+}
+
+
+ .works-post{
+   
+  @include mq(sp){
+    width: 100%;
+    display:block;
+    margin:10px 0 50px;
+  }
+  p{
+    margin:30px 0;
+ 
+    @include mq(sp){
+      font-size: 16px;
+      margin-left: 5px;
+    }
+  }
+  img{ width:300px;
+    height:(159px / 1020px) *100vw;
+    @include mq(sp){
+    // width:(750px / 896px) *100vw;
+    height:(450px / 896px) *100vw;
+    margin: 0 auto;
+ 
+    }
+  }
+  
+  a{
+   text-align: center;
+    display:block;
+text-decoration: none;
+
+  //  font-size: 16px;
+     &:visited{
+       color: black;}
+        &:hover{
+          color: lightblue;
+          border-bottom:solid 1px lightblue;
+        
+         
+        
+       } 
+  @include mq(sp){
+    flex-basis:50%;
+    width: auto;
+   }
+ }
+  
+}
+.works-endmore{
+  margin-top:100px;
+  text-align: center;
+  i{
+    font-weight: 600;
+  }
+a{
+ 
+
+    text-align: center;
+    display:inline-block;
+    font-size: 16px;
+    color:black;
+    text-decoration: none;
+      &:visited{
+        color: black;
+      }
+         &:hover{
+           color: #777;
+          //  font-size: 25px;
+         
+         }  
+    
+  }
+}
+
+
+#page_top{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+ a{
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 90px;
+  text-decoration: none;
+  &::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #777;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -40px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  &::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 45px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    color: #777;
+  }
+}
+
+}
+
+@import "works";
+@import "single";
+@import "contact";
+@import "footer";
+
+// .b{
+
+//   content:'';
+//   display:block;
+//   position: absolute;
+//   right: 200px;
+//   top:200px;
+//   background-color: #777777;
+//   width: 200px;
+//   height:100px ;
+
+
+// }
+
+
+
+
+
+
+
+// #bio{
+//   width: 920px;
+//   margin: 100px auto;
+//   font-size: large;
+//   text-align: center;
+// }
+// .bio-inner{
+//   width: 300px;
+//   margin: 100px auto;
+//   text-align: center;
+// }
+// .bio-item{
+//   display: flex;
   
  
 
-  justify-content:space-between;
-position: relative;
-  &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    left:100px;
-    width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background:lightskyblue;
-  // vertical-align: middle;
-  // text-align: center;
-  }
-dt{
-  text-align: left;
-}
-dd{
-  text-align: left;
-  margin-right:20px;
-}
-}
+//   justify-content:space-between;
+// position: relative;
+//   &:before{
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     left:100px;
+//     width: 10px;
+//   height: 10px;
+//   border-radius: 50%;
+//   background:lightskyblue;
+//   // vertical-align: middle;
+//   // text-align: center;
+//   }
+// dt{
+//   text-align: left;
+// }
+// dd{
+//   text-align: left;
+//   margin-right:20px;
+// }
+// }
 // .slider{
 //   margin: 100px auto;
 //   width: 80%;
@@ -203,8 +602,3 @@ dd{
 
 // ScrollReveal
 
-// 投稿一覧
-.works-inner{
-
-  display: flex;
-}
